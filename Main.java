@@ -16,7 +16,7 @@ class Laptop {
         this.color = color;
     }
 
-    
+    @Override
     public String toString() {
         return "Laptop{" +
                 "brand='" + brand + '\'' +
@@ -31,13 +31,14 @@ class Laptop {
 public class Main {
     public static void main(String[] args) {
         Set<Laptop> laptops = new HashSet<>();
+        laptops.add(new Laptop("Huawei", 8, 256, "Windows", "Silver"));
+        laptops.add(new Laptop("ASUS", 32, 512, "Windows", "White"));
         laptops.add(new Laptop("Dell", 16, 512, "Windows", "Black"));
-        laptops.add(new Laptop("Apple", 8, 256, "MacOS", "Silver"));
         laptops.add(new Laptop("Lenovo", 32, 1024, "Windows", "Gray"));
         laptops.add(new Laptop("Acer", 16, 1024, "Windows", "Black"));
-        laptops.add(new Laptop("ASUS", 32, 512, "Windows", "White"));
         laptops.add(new Laptop("Tecno", 4, 512, "Windows", "Red"));
-        laptops.add(new Laptop("Huawei", 8, 256, "Windows", "Silver"));
+        laptops.add(new Laptop("Apple", 8, 256, "MacOS", "Silver"));
+        
 
         Map<String, Object> filters = new HashMap<>();
 
